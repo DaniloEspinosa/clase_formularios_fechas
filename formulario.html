@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="myForm">
+        <form action="#">
+            <fieldset>
+                <legend>Texto</legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="name" minlength="2" maxlength="5">
+                <br><br>
+
+
+                <label>
+                    Apellido: <input type="text" id="apellido" name="name">
+                </label>
+                <br><br>
+                <label for="area">Text area</label>
+                <textarea name="area" id="area" cols="30" rows="2"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Otros</legend>
+
+                <label for="numero">Numero</label>
+                <input type="number" name="numero" id="numero" min="10" max="15">
+                <br><br>
+
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" id="fecha" onchange="obtenerFecha()">
+                <br><br>
+
+                <p class="mayor"></p>
+
+                <br><br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" minlength="6" maxlength="10">
+                <br><br>
+                <label for="color">Elije un color</label>
+                <input type="color" name="color" id="color" onchange="cambioDeColor()">
+                <br><br>
+                <label for="color1">Color 1</label>
+                <input type="color" name="color1" id="color1">
+                <label for="color2">Color 2</label>
+                <input type="color" name="color2" id="color2">
+                <br>
+                <button type="button" onclick="degradado()">Cambiar fondo por degradado</button>
+                <br><br><br>
+                <div class="conic"></div>
+                <div class="conic"></div>
+                <label for="color3">Color 3</label>
+                <input type="color" name="color3" id="color3">
+                <label for="color4">Color 4</label>
+                <input type="color" name="color4" id="color4">
+                <button type="button" onclick="degradadoConico()">Cambiar fondo con degradado cónico</button>
+
+            </fieldset>
+            <br>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/formulario.js"></script>
+</body>
+
+</html>
