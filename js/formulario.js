@@ -38,10 +38,13 @@ function mayorOMenor(fecha) {
     let fechaActual = "2024-03-04"
     
     let nacimiento = fecha.split("-")
-    let arrayFechaActual = fechaActual.split("-")
+    let actual = fechaActual.split("-")
 
 
-    if ((Number(arrayFechaActual[0]) - Number(nacimiento[0])) >= 18 && Number(arrayFechaActual[1]) >= Number(nacimiento[1]) && Number(arrayFechaActual[2]) >= Number(nacimiento[2])) {
+    if (
+        (Number(actual[0]) - Number(nacimiento[0])) >= 18 &&
+        Number(actual[1]) >= Number(nacimiento[1]) &&
+        Number(actual[2]) >= Number(nacimiento[2])) {
         console.log("Eres mayor de edad")
         document.querySelector(".mayor").innerText = "Eres mayor de edad"
         document.querySelector(".mayor").style.color = "green"
