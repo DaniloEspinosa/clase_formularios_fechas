@@ -27,6 +27,7 @@ function degradadoConico() {
 
 function obtenerFecha() {
     let fecha = document.getElementById("fecha").value
+
     console.log(fecha)
 
     mayorOMenor(fecha)
@@ -36,10 +37,9 @@ function obtenerFecha() {
 function mayorOMenor(fecha) {
 
     let fechaActual = "2024-03-04"
-    
+
     let nacimiento = fecha.split("-")
     let actual = fechaActual.split("-")
-
 
     if (
         (Number(actual[0]) - Number(nacimiento[0])) >= 18 &&
@@ -51,7 +51,6 @@ function mayorOMenor(fecha) {
     } else {
         document.querySelector(".mayor").innerText = "Eres menor de edad"
         document.querySelector(".mayor").style.color = "red"
-        
     }
 }
 
@@ -79,3 +78,17 @@ function mayorOMenor(fecha) {
     }
 }
 */
+
+let hoy = new Date()
+
+// getDay() dia de la semana del 0 al 6 iniciando desde el domingo
+let hoyDia = hoy.getDay()
+
+//getDate() dia del mes
+let hoyDiaMes = hoy.getDate()
+
+// getMonth() obtiene el mes por su posicion, quiere decir que el mes 3 esta en la posicion 2
+let hoyMes = hoy.getMonth()
+
+// getFullYear() con esto se obtiene el año actual
+let hoyAño = hoy.getFullYear()
